@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
+  <info>
+    <title>Indian Law Institute Style</title>
+    <id>http://www.zotero.org/styles/indian-law-institute</id>
+    <link href="http://www.zotero.org/styles/indian-law-institute" rel="self"/>
+    <author>
+      <name>Custom Style based on Indian Law Institute guidelines</name>
+    </author>
+    <category citation-format="note"/>
+    <category field="law"/>
+    <updated>2025-04-19T00:00:00+00:00</updated>
+  </info>
+
+  <macro name="author">
+    <names variable="author">
+      <name name-as-sort-order="all" delimiter=", " initialize-with=". "/>
+      <label form="short" prefix=", " text-case="lowercase" strip-periods="true"/>
+    </names>
+  </macro>
+
+  <macro name="editor">
+    <names variable="editor">
+      <name name-as-sort-order="all" delimiter=", " initialize-with=". "/>
+      <label form="short" prefix=", " text-case="lowercase" strip-periods="true"/>
+    </names>
+  </macro>
+
+  <macro name="title">
+    <text variable="title" font-style="italic"/>
+  </macro>
+
+  <macro name="container-title">
+    <text variable="container-title"/>
+  </macro>
+
+  <macro name="issued">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+
+  <macro name="pages">
+    <text variable="page" prefix=" " />
+  </macro>
+
+  <citation>
+    <layout delimiter=", " prefix="" suffix=".">
+      <text variable="title" quotes="true"/>
+      <text variable="container-title" font-style="italic"/>
+      <text macro="author"/>
+      <text macro="editor"/>
+      <text macro="issued"/>
+      <text macro="pages"/>
+    </layout>
+  </citation>
+
+  <bibliography>
+    <layout suffix=".">
+      <text macro="author" suffix=", "/>
+      <text macro="title" suffix=" "/>
+      <group delimiter=", ">
+        <text variable="publisher"/>
+        <text variable="publisher-place"/>
+        <text macro="issued"/>
+      </group>
+      <text macro="pages"/>
+    </layout>
+  </bibliography>
+</style>
